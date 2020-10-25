@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Henny Penny', cursive;
+  font-size: 16px;
+  color: #231301;
+}
+
+h1,
+h2,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  background: #FEC502;
+  background: radial-gradient(circle farthest-side at bottom center, #fe9f00 0%, #fec502 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+.head-block {
+  width: 150px;
+  /* height: max-content; */
+  text-align: center;
+  text-shadow: -6px -3px 3px rgba(255, 108, 1, 0.4);
+}
+
+.header-img {
+  width: 100%;
+}
+
+.pumpkins {
+  width: calc(100vw - 300px);
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-block {
+  width: 50%;
+  position: relative;
+}
+
+.main-block ~ .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 60px; 
+  background: #fe9f00;
+  background: linear-gradient(50deg,#fe9f00 0%, #fec502 60%);
+}
+
+.title {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  text-shadow: -6px -3px 3px rgba(255, 108, 6, 1); 
+}
+
+.title-date {
+  width: 60%;
+  font-size: 35px;
+  letter-spacing: 3px;
+  word-spacing: 14px;
+  
+}
+
+.title-year {
+  width: 40%;
+  font-size: 35px;
+  letter-spacing: 3px;
+  word-spacing: 14px;
+}
+
+.main-block-img {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .head-block ~ .text {
+    display: none;
+  }
+  .pumpkins {
+    width: calc(100vw - 150px);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: scroll;
+    background: linear-gradient(90deg, #fec502 0%, #fec502 60%,#fe9f00 80%, #fec502 100%);
+  }
+
+  header,
+  main {
+    flex-direction: column;
+    position: relative;
+  }
+  .head-block ~ .text {
+    display: flex;
+  }
+  .head-block .header-img {
+    position: absolute;
+    width: 30%;
+    left: 40vw;
+  }
+  .pumpkins {
+    width: 100%;
+  }
+  .main-block {
+    width: 100%;
+    height: fit-content;
+  }
+  .main-block ~ .text {
+    padding: 0;
+    background: linear-gradient(90deg, #fec502 0%, #fec502 60%,#fe9f00 80%, #fec502 100%);
+  }
+}
